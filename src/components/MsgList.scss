@@ -1,0 +1,64 @@
+@import "../styles/vars.scss";
+
+.msg-list {
+  padding: 0.3rem;
+  display: flex;
+  overflow-y: auto;
+  flex-flow: column;
+  width: inherit;
+  height: 300px;
+  overflow-y: auto;
+  .msg-item-container {
+    width: inherit;
+    &.self {
+      align-self: flex-end;
+      .msg-list-item {
+        background-color: $self-text-bg;
+        color: $black;
+      }
+
+      .user-name {
+        color: $self-text-bg;
+      }
+    }
+
+    &:not(.self) {
+      align-self: flex-start;
+      .user-name {
+        color: #e6e6fa;
+      }
+    }
+    .msg-list-item {
+      width: inherit;
+      background-color: #e6e6fa;
+      height: max-content;
+      margin: 4px 0;
+      border-radius: 4px;
+
+      .msg-list-item-value {
+        width: inherit;
+        border-radius: 0.4em;
+        font-size: 18px;
+        display: flex;
+        padding: 5px;
+
+        &__text {
+          margin-right: 0.8em;
+        }
+
+        &__time {
+          font-size: 10px;
+          width: 130px;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+
+  // Hide scrollbar
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

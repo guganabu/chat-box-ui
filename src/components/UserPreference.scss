@@ -1,0 +1,30 @@
+@import "../styles/vars.scss";
+.user-pref-container {
+  max-width: 300px;
+  margin: 10% auto;
+
+  .input-container {
+    margin: 12px 0;
+    .input-name {
+      display: grid;
+      .label {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      .input {
+        height: 30px;
+      }
+    }
+  }
+
+  .action-container {
+    display: grid;
+    .button {
+      width: inherit;
+      padding: 8px;
+      background-color: $chat-bg-color;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+}

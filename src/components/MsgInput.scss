@@ -1,0 +1,19 @@
+@import "../styles/vars.scss";
+.msg-input {
+  height: 50px;
+  width: 99%;
+  padding: 0;
+  border: 1px solid $border;
+  // border-top: 1px solid;
+  resize: none;
+  // box-shadow: 0px 1px 5px rgb(74, 201, 89);
+  border-radius: 4px;
+  background-color: transparent;
+  color: $white;
+  margin: 0 auto;
+  &:focus {
+    // border: none;
+    outline: none;
+    // border-top: 1px solid;
+  }
+}
