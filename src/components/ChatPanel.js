@@ -1,15 +1,16 @@
-import "./Public.scss"
+import "./ChatPanel.scss"
 import { socketClient } from "../services/Socket"
 import React from "react"
 import MsgInput from "./MsgInput"
 import MsgList from "./MsgList"
-import UserPreference from "./UserPreference"
 import { messageService } from "../services/Message"
+import UserPreference from "./UserPreference"
+import UserContext from "../context/UserContext"
 
-class Public extends React.Component {
+export default class ChatPanel extends React.Component {
   constructor() {
     super()
-    this.state = { messages: [], isShowUserPreference: true, userPref: {} }
+    this.state = { messages: [], isShowInitialState: true, userPref: {} }
     this.msgSubscription = null
   }
 
@@ -21,7 +22,6 @@ class Public extends React.Component {
 
     // Public msgs captured via socket
     socketClient.on("private", (msg) => {
-      console.log("msg in pub", msg)
       this.updateMsgs(msg)
     })
   }
@@ -31,26 +31,25 @@ class Public extends React.Component {
   }
 
   updateMsgs(message) {
-    console.log("state", ...this.state.messages)
     this.setState({ messages: [...this.state.messages, message] })
   }
 
-  saveUserPreference = (pref) => {
-    this.setState({ isShowUserPreference: false, userPref: pref })
+  captureUserPref = (userPref) => {
+    this.setState({ isShowInitialState: false, userPref: userPref })
   }
 
   render() {
-    if (this.state.isShowUserPreference) {
-      return <UserPreference handleSave={this.saveUserPreference} />
+    if (this.state.isShowInitialState) {
+      return <UserPreference sendAction={this.captureUserPref} />
     } else {
       return (
-        <div className="chat-window">
-          <MsgList messages={this.state.messages} />
-          <MsgInput room="private" userPref={this.state.userPref} />
+        <div className="ChatWindow">
+          <UserContext.Provider value={this.state.userPref}>
+            <MsgList messages={this.state.messages} />
+            <MsgInput room="private" userPref={{}} />
+          </UserContext.Provider>
         </div>
       )
     }
   }
 }
-
-export default Public

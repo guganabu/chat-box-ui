@@ -1,0 +1,19 @@
+@import "../styles/vars.scss";
+
+.ChatWindow {
+  background-color: $white;
+  display: grid;
+  grid-template-rows: 1fr 60px;
+  background-color: $chat-bg-color;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 5px 3px #383838;
+  border-radius: 5px;
+}
+
+.join-screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: #383838;
+  position: absolute;
+}

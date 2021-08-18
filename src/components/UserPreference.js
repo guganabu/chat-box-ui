@@ -8,9 +8,8 @@ export default class UserPreference extends React.Component {
       inputName: "",
     }
   }
-  handleSave = () => {
-    console.log("submitted", this.state.inputName)
-    return this.props.handleSave({
+  joinChat = () => {
+    this.props.sendAction({
       name: this.state.inputName,
     })
   }
@@ -20,21 +19,21 @@ export default class UserPreference extends React.Component {
   }
   render() {
     return (
-      <div className="user-pref-container">
-        <div className="input-container">
-          <div className="input-name">
-            <span className="label">Enter your name</span>
+      <div className="UserPrefContainer">
+        <div className="InputContainer">
+          <div className="InputName">
+            <span className="Label">Enter your name</span>
             <input
-              className="input"
+              className="Input"
               name="inputName"
               value={this.state.inputName}
               onChange={this.handleChange}
             ></input>
           </div>
         </div>
-        <div className="action-container">
-          <button className="button" onClick={this.handleSave}>
-            Join
+        <div className="ActionContainer">
+          <button className="Button" onClick={this.joinChat}>
+            Join Chat
           </button>
         </div>
       </div>

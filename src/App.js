@@ -1,11 +1,13 @@
-import "./App.css"
-import Public from "./components/Public"
+import "./App.scss"
+import ChatPanel from "./components/ChatPanel"
 
 function App() {
   return (
     <div className="App">
-      <main>
-        <Public></Public>
+      <main className="Main">
+        <div className="ChatContainer">
+          <ChatPanel />
+        </div>
       </main>
     </div>
   )

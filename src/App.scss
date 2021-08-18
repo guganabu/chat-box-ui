@@ -1,0 +1,22 @@
+.App {
+  height: 100vh;
+}
+
+.Main {
+  height: inherit;
+  display: grid;
+  align-items: center;
+}
+.ChatContainer {
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  border-radius: 5px;
+
+  max-height: 100vh;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,54 +1,54 @@
 @import "../styles/vars.scss";
 
-.msg-list {
+.MsgList {
   padding: 0.3rem;
   display: flex;
-  overflow-y: auto;
   flex-flow: column;
-  width: inherit;
-  height: 300px;
   overflow-y: auto;
-  .msg-item-container {
+  .MsgListItemContainer {
     width: inherit;
+
+    .UserName {
+      font-size: 0.8rem;
+    }
     &.self {
       align-self: flex-end;
-      .msg-list-item {
+      .MsgListItem {
         background-color: $self-text-bg;
         color: $black;
       }
 
-      .user-name {
+      .UserName {
         color: $self-text-bg;
       }
     }
 
     &:not(.self) {
       align-self: flex-start;
-      .user-name {
+      .UserName {
         color: #e6e6fa;
       }
     }
-    .msg-list-item {
+    .MsgListItem {
       width: inherit;
       background-color: #e6e6fa;
       height: max-content;
       margin: 4px 0;
       border-radius: 4px;
 
-      .msg-list-item-value {
+      .MsgListItemValue {
         width: inherit;
         border-radius: 0.4em;
         font-size: 18px;
         display: flex;
         padding: 5px;
 
-        &__text {
+        &Text {
           margin-right: 0.8em;
         }
 
-        &__time {
+        &Time {
           font-size: 10px;
-          width: 130px;
           align-self: flex-end;
         }
       }

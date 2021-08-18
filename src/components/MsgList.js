@@ -3,41 +3,31 @@ import "./MsgList.scss"
 import { format } from "date-fns"
 
 class MsgList extends React.Component {
-  constructor(props) {
-    super(props)
-    console.log("props", props)
-  }
-
   componentDidMount() {
     this.scrollToBottom()
   }
 
   componentDidUpdate() {
-    console.log("comp update")
     this.scrollToBottom()
   }
 
   scrollToBottom = () => {
-    console.log("this.messagesEnd", this.messagesEnd)
     this.messagesEnd.scrollIntoView(false)
   }
 
   render() {
     return (
-      <div className="msg-list">
+      <div className="MsgList">
         {this.props.messages.map((msg, seq) => {
           return (
-            <div className={`msg-item-container ${msg.actor}`} key={seq}>
-              <div className="user-name">
+            <div className={`MsgListItemContainer ${msg.actor}`} key={seq}>
+              <div className="UserName">
                 {msg.actor === "self" ? "You" : msg.data.user_name}
               </div>
-              <div className="msg-list-item">
-                <span className="msg-list-item-value">
-                  <span className="msg-list-item-value__text">
-                    {msg.data.text}
-                  </span>
-                  <span className="msg-list-item-value__time">
-                    {console.log("msg.data.date_time", msg.data.date_time)}
+              <div className="MsgListItem">
+                <span className="MsgListItemValue">
+                  <span className="MsgListItemValueText">{msg.data.text}</span>
+                  <span className="MsgListItemValueTime">
                     {format(new Date(msg.data.date_time), "p")}
                   </span>
                 </span>

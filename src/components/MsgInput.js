@@ -2,17 +2,14 @@ import React from "react"
 import "./MsgInput.scss"
 import { socketClient } from "../services/Socket"
 import { messageService } from "../services/Message"
+import UserContext from "../context/UserContext"
+import Icon from "@material-ui/core/Icon"
 
 class MsgInput extends React.Component {
-  // static contextType = SocketContext;
+  static contextType = UserContext
   constructor(props) {
     super(props)
     this.state = { inputMsg: "" }
-
-    // this.socket = this.context.socket;
-    // this.id = this.context.id;
-    // console.log("context", this.context);
-    // console.log("id", this.props);
   }
 
   onKeyPress = (e) => {
@@ -27,7 +24,7 @@ class MsgInput extends React.Component {
     })
   }
 
-  emit() {
+  emit = () => {
     socketClient.emit(this.props.room, this._msgObject())
     messageService.pushMessage(this._msgObject())
     this.setState({ inputMsg: "" })
@@ -39,21 +36,26 @@ class MsgInput extends React.Component {
       data: {
         text: this.state.inputMsg,
         date_time: new Date(),
-        user_name: this.props.userPref.name,
+        user_name: this.context.name,
       },
     }
   }
 
   render() {
     return (
-      <textarea
-        type="text"
-        name="inputMsg"
-        className="msg-input"
-        value={this.state.inputMsg}
-        onKeyPress={this.onKeyPress}
-        onChange={this.onInputchange}
-      />
+      <div className="MsgInput">
+        <Icon className="MsgInput-icon" onClick={this.emit}>
+          send
+        </Icon>
+        <input
+          type="text"
+          name="inputMsg"
+          className="MsgInput-box"
+          value={this.state.inputMsg}
+          onKeyPress={this.onKeyPress}
+          onChange={this.onInputchange}
+        />
+      </div>
     )
   }
 }

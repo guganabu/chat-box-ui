@@ -1,30 +1,36 @@
 @import "../styles/vars.scss";
-.user-pref-container {
-  max-width: 300px;
-  margin: 10% auto;
+.UserPrefContainer {
+  max-width: 90vw;
+  margin: 0 auto;
+  margin: 10 auto;
+  width: 30rem;
+  margin-top: calc(100vh / 3);
 
-  .input-container {
-    margin: 12px 0;
-    .input-name {
+  .InputContainer {
+    margin: 2rem 0;
+    .InputName {
       display: grid;
-      .label {
-        font-size: 14px;
+      .Label {
+        font-size: 2rem;
         margin-bottom: 5px;
+        text-align: center;
+        margin-bottom: 0.5em;
       }
-      .input {
+      .Input {
         height: 30px;
       }
     }
   }
 
-  .action-container {
+  .ActionContainer {
     display: grid;
-    .button {
+    .Button {
       width: inherit;
-      padding: 8px;
+      padding: 0.5rem;
       background-color: $chat-bg-color;
       color: $white;
       cursor: pointer;
+      font-size: 1.5rem;
     }
   }
 }
