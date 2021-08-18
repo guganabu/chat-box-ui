@@ -2,7 +2,7 @@ import { io } from "socket.io-client"
 
 class SocketClient {
   constructor() {
-    this.io = io(`http://localhost:3000`)
+    this.io = io(`https://g-chat-box.herokuapp.com`)
   }
 
   init() {
