@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/guganabu/chat-box-ui/static/css/main.970bd84c.chunk.css",
-    "main.js": "/guganabu/chat-box-ui/static/js/main.85c674e8.chunk.js",
-    "main.js.map": "/guganabu/chat-box-ui/static/js/main.85c674e8.chunk.js.map",
-    "runtime-main.js": "/guganabu/chat-box-ui/static/js/runtime-main.a95c5185.js",
-    "runtime-main.js.map": "/guganabu/chat-box-ui/static/js/runtime-main.a95c5185.js.map",
-    "static/js/2.eebf1dd4.chunk.js": "/guganabu/chat-box-ui/static/js/2.eebf1dd4.chunk.js",
-    "static/js/2.eebf1dd4.chunk.js.map": "/guganabu/chat-box-ui/static/js/2.eebf1dd4.chunk.js.map",
-    "static/js/3.5a4c9404.chunk.js": "/guganabu/chat-box-ui/static/js/3.5a4c9404.chunk.js",
-    "static/js/3.5a4c9404.chunk.js.map": "/guganabu/chat-box-ui/static/js/3.5a4c9404.chunk.js.map",
-    "index.html": "/guganabu/chat-box-ui/index.html",
-    "static/css/main.970bd84c.chunk.css.map": "/guganabu/chat-box-ui/static/css/main.970bd84c.chunk.css.map",
-    "static/js/2.eebf1dd4.chunk.js.LICENSE.txt": "/guganabu/chat-box-ui/static/js/2.eebf1dd4.chunk.js.LICENSE.txt"
+    "main.css": "/chat-box-ui/static/css/main.970bd84c.chunk.css",
+    "main.js": "/chat-box-ui/static/js/main.85c674e8.chunk.js",
+    "main.js.map": "/chat-box-ui/static/js/main.85c674e8.chunk.js.map",
+    "runtime-main.js": "/chat-box-ui/static/js/runtime-main.c9e68f20.js",
+    "runtime-main.js.map": "/chat-box-ui/static/js/runtime-main.c9e68f20.js.map",
+    "static/js/2.f8678efb.chunk.js": "/chat-box-ui/static/js/2.f8678efb.chunk.js",
+    "static/js/2.f8678efb.chunk.js.map": "/chat-box-ui/static/js/2.f8678efb.chunk.js.map",
+    "static/js/3.5a4c9404.chunk.js": "/chat-box-ui/static/js/3.5a4c9404.chunk.js",
+    "static/js/3.5a4c9404.chunk.js.map": "/chat-box-ui/static/js/3.5a4c9404.chunk.js.map",
+    "index.html": "/chat-box-ui/index.html",
+    "static/css/main.970bd84c.chunk.css.map": "/chat-box-ui/static/css/main.970bd84c.chunk.css.map",
+    "static/js/2.f8678efb.chunk.js.LICENSE.txt": "/chat-box-ui/static/js/2.f8678efb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a95c5185.js",
-    "static/js/2.eebf1dd4.chunk.js",
+    "static/js/runtime-main.c9e68f20.js",
+    "static/js/2.f8678efb.chunk.js",
     "static/css/main.970bd84c.chunk.css",
     "static/js/main.85c674e8.chunk.js"
   ]
